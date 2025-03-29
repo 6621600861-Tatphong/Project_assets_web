@@ -52,8 +52,8 @@ const loadData = async () => {
                </td>
 
                <td class='balance '>
-                  <a href = 'index2.html?id=${user.id}' ><button class='button button2'>Edit</button></a>
-                  <button class = 'button button2  delete' data-id= '${user.id}'>Delete</button>
+                  <a href = 'add.html?id=${user.id}' ><button>Edit</button></a>
+                  <button class="delete" data-id="${user.id}">Delete</button>
                </td>
             </tr>
          </table>
@@ -69,7 +69,7 @@ const loadData = async () => {
          //ดึง id ของ user ที่ต้องการลบ
          const id = e.target.dataset.id
          try{
-            await axios.delete(`${BASE_URL}/users/${id}`);
+            await axios.delete(`${BASE_URL}/assets/${id}`);
             loadData() // recursive function = เรียกใช้ฟังก์ชันตัวเอง   
          }catch(error){
             console.log('error', error);

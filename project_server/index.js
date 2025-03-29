@@ -170,6 +170,14 @@ app.delete('/assets/:id', async (req, res) => {
     }
 });
 
+app.get('/assets', (req, res) => {
+    db.query('SELECT asset_code, name, DATE_FORMAT(purchase_date, "%d/%m/%Y") AS purchase_date FROM assets', 
+    (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
 //-------------------------------------------details-------------------------------------------------//
 
 // เริ่มเซิร์ฟเวอร์และเชื่อมต่อฐานข้อมูล

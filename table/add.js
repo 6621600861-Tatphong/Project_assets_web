@@ -14,7 +14,7 @@ window.onload = async () => {
       //1. ดึงข้อมูล user ที่ต้องการแก้ไข
       try {
          const response = await axios.get(`${BASE_URL}/assets/${id}`);
-         const user = response.data;
+         const asset = response.data;
 
          //2. นำข้อมูลของ user ที่ดึงมาแสดงใน form
          let asset_codeDOM = document.querySelector('input[name=asset_code]');
