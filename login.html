@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+   <div class="header">
+      <h1>My Website</h1>
+      <p>Resize the browser window to see the effect.</p>
+    </div>
+    
+    <div class="topnav">
+      <a href="add.html">Assets Adjust</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="login.html" style="float:right">Exit</a>
+    </div>
+
+   <h1>Login</h1>
+   
+   <form id="loginForm">
+      <div>
+         Username :
+         <input name="username" type="text" id="username" placeholder="Enter your Username" required>
+      </div>
+
+      <div>
+         Password :
+         <input name="password" type="password" id="password" placeholder="Enter your Password" required>
+      </div>
+      <div>
+         <button type="submit">Login</button>
+      </div>
+   </form>
+   <div id="message"></div>
+
+   <a href="register.html">Register</a>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="login.js"></script>
+</body>
+
+</html>
