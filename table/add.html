@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>เพิ่มข้อมูลทรัพย์สิน</title>
+   
+</head>
+
+<body>
+   <div>
+      <h2>ฟอร์มเพิ่มข้อมูลทรัพย์สิน</h2>
+      <div>
+         รหัสทรัพย์สิน
+         <input type="text" id="asset_code" name="asset_code" required placeholder="กรอกรหัสทรัพย์สิน">
+      </div>
+
+      <div>
+         ชื่อทรัพย์สิน
+         <input type="text" id="name" name="name" required placeholder="กรอกชื่อทรัพย์สิน">
+      </div>
+
+      <div>
+         หมวดหมู่ทรัพย์สิน
+         <input type="text" id="category" name="category" required placeholder="กรอกหมวดหมู่ทรัพย์สิน">
+      </div>
+
+      <div>
+         ยี่ห้อ
+         <input type="text" id="brand" name="brand" placeholder="กรอกยี่ห้อ (ไม่บังคับ)">
+      </div>
+
+      <div>
+         รุ่น
+         <input type="text" id="model" name="model" placeholder="กรอกข้อมูลรุ่น (ไม่บังคับ)">
+      </div>
+
+      <div>
+         หมายเลขเครื่อง
+         <input type="text" id="serial_number" name="serial_number" placeholder="กรอกหมายเลขเครื่อง (ไม่บังคับ)">
+      </div>
+
+      <div>
+         วันที่ซื้อ
+         <input type="date" id="purchase_date" name="purchase_date" placeholder="กรอกวันที่ซื้อ">
+      </div>
+
+      <div>
+         ราคาซื้อ (บาท)
+         <input type="number" id="purchase_price" name="purchase_price" step="0.01" placeholder="กรอกราคาซื้อ">
+      </div>
+
+      <div>
+         สถานที่จัดเก็บ
+         <input type="text" id="location" name="location" placeholder="กรอกสถานที่จัดเก็บ">
+      </div>
+
+      <div>
+         สถานะการใช้งาน
+         <div>
+            <input name="status" type="radio" value="พร้อมใช้งาน">พร้อมใช้งาน</input>
+         </div>
+         <div>
+            <input name="status" type="radio" value="กำลังใช้งาน">กำลังใช้งาน</input>
+         </div>
+         <div>
+            <input name="status" type="radio" value="ซ่อมบำรุง">ซ่อมบำรุง</input>
+         </div>
+         <div>
+            <input name="status" type="radio" value="จำหน่ายออก">จำหน่ายออก</input>
+         </div>
+      </div>
+   </div>
+
+   <div id="message"></div>
+
+   <div>
+      <button type="submit" onclick="submitData()">บันทึกข้อมูล</button>
+   </div>
+   <div>
+      <a href="table.html">Go to Assets Table</button>
+   </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+   <script src="add.js"></script>
+</body>
+
+</html>
