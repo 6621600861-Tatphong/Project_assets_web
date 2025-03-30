@@ -17,12 +17,11 @@
     
     <div class="topnav">
       <a href="add.html">Assets Adjust</a>
-      <a href="#">Link</a>
-      <a href="#">Link</a>
+      <a href="#">Location</a>
+      <a href="#.html">Repair History</a>
       <a href="login.html" style="float:right">Exit</a>
     </div>
     
-
    <h1>Assets Form</h1> <!-- หัวข้อหลัก -->
    <p>กรุณากรอกข้อมูลสินทรัพย์ของคุณในฟอร์มด้านล่างนี้</p> <!-- หัวข้อรอง -->
 
@@ -30,44 +29,52 @@
       Asset ID :
       <input type="text" name="asset_code" placeholder="Asset ID" required>
    </div>
+
    <div>
       Asset Name :
       <input type="text" name="asset_name" placeholder="Asset Name" required>
    </div>
+
    <div>
       Category :
       <input type="text" name="category" placeholder="Category" required>
    </div>
+
    <div>
       Brand :
       <input type="text" name="brand" placeholder="Brand" required>
    </div>
+
    <div>
       Model :
       <input type="text" name="model" placeholder="Model" required>
    </div>
+
    <div>
       Serial Number :
       <input type="text" name="serial_number" placeholder="Serial Number" required>
    </div>
+
    <div>
       Purchase Date :
       <input type="date" name="purchase_date" placeholder="Purchase Date" required>
    </div>
+   
    <div>
       Purchase Price :
       <input type="number" name="purchase_price" placeholder="Purchase Price" required>
    </div>
+
    <div>
       Status :
       <div>
-         <input name="status" type="checkbox" value="Active"> Active
+         <input name="status" type="radio" value="Active"> Active
       </div>
       <div>
-         <input name="status" type="checkbox" value="Inactive"> Inactive
+         <input name="status" type="radio" value="Inactive"> Inactive
       </div>
       <div>
-         <input name="status" type="checkbox" value="Maintenance"> Maintenance
+         <input name="status" type="radio" value="Maintenance"> Maintenance
       </div>
    </div>
 
@@ -77,7 +84,7 @@
       <button type="submit" onclick="submitData()">Submit</button>
    </div>
 
-   <h2>Assets Mangement</h2>
+   <h2>Assets Table</h2>
 
    <div>
       <table >
@@ -97,12 +104,10 @@
       </table>
    </div>
 
-   <a href="table.html">Assets Table</a>
-
    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
    <script src="add.js"></script>
 
    </form>
-</body>
 
+</body>
 </html>
