@@ -1,3 +1,11 @@
+.changebg{
+  background:url(https://i.pinimg.com/236x/a9/14/05/a91405df5998c36ce59534faa7f09980.jpg);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 table {
    border-collapse: collapse;
    width: 100%;
@@ -20,33 +28,92 @@ table {
  }
 
  .header {
-  padding: 30px;
   text-align: center;
-  background: white;
+  padding: 10px 0; /* ปรับ padding เพื่อให้ระยะห่างไม่มากเกินไป */
 }
 
 .header h1 {
+  padding-bottom: 5px;  /* ลด padding บน h1 */
   font-size: 50px;
+  margin-bottom: 5px;  /* ลด margin บน h1 */
+  color: rgb(8, 112, 13);  /* เปลี่ยนสีให้ดูสดใส */
 }
+
+.header h2 {
+  font-size: 20px;
+  margin-top: 0;  /* ลด margin บน h2 */
+  color: rgb(59, 90, 60);  /* สีเทาเข้มสำหรับ h2 */
+}
+
+
 
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(28, 94, 66);
 }
 
 /* Style the topnav links */
 .topnav a {
+  font-size: 17px;
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 25px;
   text-decoration: none;
 }
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: rgb(87, 158, 111);
+  color: white;
+}
+
+.container {
+  border: 2px solid rgb(87, 86, 87);
+  width: 100%;
+  margin-top: 5px;
+  margin-left: auto;
+  max-width: 3000px;
+  margin-right: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.8);  /* เปลี่ยนพื้นหลังให้มีโปร่งแสง */
+  box-shadow: 0 0 40px rgba(177, 177, 177, 0.4);  /* เงาที่นุ่มนวล */
+  border-radius: 20px;
+  backdrop-filter: blur(10px);  /* เอฟเฟกต์เบลอ */
+}
+
+.button {
+  transition-duration: 0.5s;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.button1 {
+  background-color: rgb(116, 184, 139);
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  border: 2px solid rgb(82, 131, 98);
+  border-radius: 9px;
+  padding: 5px 7px;  /* เพิ่มขนาดให้ปุ่มใหญ่ขึ้น */
+}
+
+.button1:hover {
+  background-color: rgb(82, 146, 109);
+  color: white;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+/* สไตล์ช่องกรอกข้อมูล */
+.form-input {
+  margin-bottom: 5px;
+  margin-left: 30px;
+  color: #333;
 }

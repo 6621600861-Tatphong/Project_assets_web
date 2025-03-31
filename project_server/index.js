@@ -306,12 +306,6 @@ const validateUserData = (userData) => {
     return errors;
  }
 
-// GET /users - ดึง Users ทั้งหมด
-app.get('/users', async (req, res) => {
-    const results = await conn.query('SELECT * FROM users');
-    res.json(results[0]);
-});
-
 // POST /users - เพิ่ม Users ใหม่
 app.post('/users', async (req, res) => {
 

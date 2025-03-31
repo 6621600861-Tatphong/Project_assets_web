@@ -3,43 +3,6 @@ const BASE_URL = 'http://localhost:8600';
 let mode = 'CREATE' // default mode
 let selectedID = ''
 
-window.onload = async () => {
-   const urlParams = new URLSearchParams(window.location.search);
-   const id = urlParams.get('id');
-   console.log('id', id);
-   if (id) {
-       mode = 'EDIT'
-       selectedID = id
-
-       //1. ดึงข้อมูล user ที่ต้องการแก้ไข
-       try {
-           const response = await axios.get(`${BASE_URL}/users/${id}`);
-           const user = response.data;
-
-           //2. นำข้อมูลของ user ที่ดึงมาแสดงใน form
-           let usernameDOM = document.querySelector('input[name=username]');
-           let passwordDOM = document.querySelector('input[name=password]');
-           let emailDOM = document.querySelector('input[name=email]');
-           let phoneDOM = document.querySelector('input[name=phone]');
-           let roleDOM = document.querySelectorAll('input[name=role]');
-          
-           usernameDOM.value = user.username;
-           passwordDOM.value = user.password;
-           emailDOM.value = user.email
-           phoneDOM.value = user.phone;
-
-           for (let i = 0; i < roleDOM.length; i++) {
-               if (roleDOM[i].value == user.role) {
-                   roleDOM[i].checked = true;
-               }
-           }
-      
-
-       } catch (error) {
-           console.log('error', error);
-       }
-   }
-}
 
 const validateUserData = (userData) => {
    let errors = [];

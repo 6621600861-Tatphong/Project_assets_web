@@ -1,31 +1,138 @@
+.changebg{
+  background:url(https://i.pinimg.com/236x/a9/14/05/a91405df5998c36ce59534faa7f09980.jpg);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+
+/* ส่วน Header */
 .header {
-  padding: 30px;
   text-align: center;
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(90px);
+  padding: 10px 0; /* ปรับ padding เพื่อให้ระยะห่างไม่มากเกินไป */
 }
 
 .header h1 {
+  padding-bottom: 5px;  /* ลด padding บน h1 */
   font-size: 50px;
+  margin-bottom: 5px;  /* ลด margin บน h1 */
+  color: rgb(8, 112, 13);  /* เปลี่ยนสีให้ดูสดใส */
 }
 
-/* Style the top navigation bar */
+.header h2 {
+  font-size: 20px;
+  margin-top: 0;  /* ลด margin บน h2 */
+  color: rgb(59, 90, 60);  /* สีเทาเข้มสำหรับ h2 */
+}
+
+/* ส่วน Container */
+.container {
+  border: 2px solid rgb(87, 86, 87);
+  width: 100%;
+  margin-top: 5px;
+  margin-left: auto;
+  max-width: 350px;
+  margin-right: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.8);  /* เปลี่ยนพื้นหลังให้มีโปร่งแสง */
+  box-shadow: 0 0 40px rgba(177, 177, 177, 0.4);  /* เงาที่นุ่มนวล */
+  border-radius: 20px;
+  backdrop-filter: blur(10px);  /* เอฟเฟกต์เบลอ */
+}
+
+/* ส่วน Navigation */
 .topnav {
-   overflow: hidden;
-   background-color: #333;
- }
- 
- /* Style the topnav links */
- .topnav a {
-   float: left;
-   display: block;
-   color: #f2f2f2;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
- }
- 
- /* Change color on hover */
- .topnav a:hover {
-   background-color: #ddd;
-   color: black;
- }
+  overflow: hidden;
+  background-color: rgb(28, 94, 66);
+}
+
+.topnav a {
+  font-size: 20px;
+  display: block;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+/* ตำแหน่งต่าง ๆ */
+.position1 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.position2 {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.position3 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.position3 a {
+  text-decoration: none;
+  color: rgb(10, 110, 52);
+  font-weight: bold;
+}
+
+.position3 a:visited,
+.position3 a:hover,
+.position3 a:active {
+  color: rgb(82, 146, 109);
+  text-decoration: underline;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+/* สไตล์ช่องกรอกข้อมูล */
+.form-input {
+  margin-bottom: 5px;
+  margin-left: 30px;
+  color: #333;
+}
+
+#username, #password {
+  
+  width: 80%;
+  height: 40px;  /* เพิ่มความสูงให้ช่องกรอกข้อมูล */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+/* ปุ่ม Login */
+.button {
+  transition-duration: 0.5s;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.button1 {
+  background-color: rgb(116, 184, 139);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border: 2px solid rgb(82, 131, 98);
+  border-radius: 9px;
+  padding: 12px 30%;  /* เพิ่มขนาดให้ปุ่มใหญ่ขึ้น */
+}
+
+.button1:hover {
+  background-color: rgb(82, 146, 109);
+  color: white;
+  cursor: pointer;
+}
+
+
