@@ -10,84 +10,86 @@
 
 <body>
 
-   <div class="container">
-
-      <div class="header">
+   <ul>
+      <div class="bottom">
          <h1>Asset & Inventory</h1>
          <h2>Management System Website</h2>
       </div>
+      <li><a href="add.html">Assets Adjust</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="borrow.html">Asset Borrow</a></li>
+      <li><a href="login.html" style="float:bottom">Exit</a></li>
+   </ul>
 
-      <div class="topnav">
-         <a href="add.html">Assets Adjust</a>
-         <a href="location.html">Link</a>
-         <a href="repair.html">Repair History</a>
-         <a href="login.html" style="float:right">Exit</a>
-      </div>
+   <div class="container">
+      <div class="padding">
+         <h3>Assets Form</h3> <!-- หัวข้อหลัก -->
+         <p>กรุณากรอกข้อมูลสินทรัพย์ของคุณในฟอร์มด้านล่างนี้</p> <!-- หัวข้อรอง -->
+
+         <div class="form-container">
+            <div class="form-group">
+               <label class="form-label">Asset ID :</label>
+               <input type="text" name="asset_code" class="form-input" placeholder="Asset ID" required>
+            </div>
+
+            <div class="form-group">
+               <label class="form-label">Asset Name :</label>
+               <input type="text" name="asset_name" class="form-input" placeholder="Asset Name" required>
+            </div>
+
+            <div class="form-group">
+               <label class="form-label">Category :</label>
+               <input type="text" name="category" class="form-input" placeholder="Category" required>
+            </div>
+
+            <div class="form-group">
+               <label class="form-label">Brand :</label>
+               <input type="text" name="brand" class="form-input" placeholder="Brand" required>
+            </div>
+
+            <div class="form-group">
+               <label class="form-label">Model :</label>
+               <input type="text" name="model" class="form-input" placeholder="Model" required>
+            </div>
+
+            <div class="form-group">
+               <label class="form-label">Serial Number :</label>
+               <input type="text" name="serial_number" class="form-input" placeholder="Serial Number" required>
+            </div>
+
+            <div class="form-group">
+               <label class="form-label">Purchase Date :</label>
+               <input type="date" name="purchase_date" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+               <label class="form-label">Purchase Price :</label>
+               <input type="number" name="purchase_price" class="form-input" placeholder="Purchase Price" required>
+            </div>
+         </div> <!-- ปิด form-container -->
 
 
-      <h3>Assets Form</h3> <!-- หัวข้อหลัก -->
-      <p>กรุณากรอกข้อมูลสินทรัพย์ของคุณในฟอร์มด้านล่างนี้</p> <!-- หัวข้อรอง -->
-
-      <div>
-         <div class="flex form-input"> Asset ID : </div>
-         <input type="text" name="asset_code" placeholder="Asset ID" required>
-      </div>
-
-      <div>
-         <div class="flex form-input"> Asset Name : </div>
-         <input type="text" name="asset_name" placeholder="Asset Name" required>
-      </div>
-
-      <div>
-         <div class="flex form-input"> Category : </div>
-         <input type="text" name="category" placeholder="Category" required>
-      </div>
-
-      <div>
-         <div class="flex form-input"> Brand : </div>
-         <input type="text" name="brand" placeholder="Brand" required>
-      </div>
-
-      <div>
-         <div class="flex form-input"> Model : </div>
-         <input type="text" name="model" placeholder="Model" required>
-      </div>
-
-      <div>
-         <div class="flex form-input"> Serial Number : </div>
-         <input type="text" name="serial_number" placeholder="Serial Number" required>
-      </div>
-
-      <div>
-         <div class="flex form-input"> Purchase Date : </div>
-         <input type="date" name="purchase_date" placeholder="Purchase Date" required>
-      </div>
-
-      <div>
-         <div class="flex form-input">Purchase Price : </div>
-         <input type="number" name="purchase_price" placeholder="Purchase Price" required>
-      </div>
-
-      <div>
-         Status :
          <div>
-            <input name="status" type="radio" value="Active"> Active
+            Status :
+            <div>
+               <input name="status" type="radio" value="Active"> Active
+            </div>
+            <div>
+               <input name="status" type="radio" value="Inactive"> Inactive
+            </div>
          </div>
+
+         <div id="message"></div>
+
          <div>
-            <input name="status" type="radio" value="Inactive"> Inactive
-         </div>
-         <div>
-            <input name="status" type="radio" value="Maintenance"> Maintenance
+            <button class="button button1" type="submit" onclick="submitData()">Submit</button>
          </div>
       </div>
+   </div>
+</div>
 
-      <div id="message"></div>
-
-      <div>
-         <button class="button button1" type="submit" onclick="submitData()">Submit</button>
-      </div>
-
-      <h2>Assets Table</h2>
+<div class="container2">
+      <h3>Assets Table</h3>
 
       <div>
          <table>
@@ -107,6 +109,7 @@
          </table>
       </div>
    </div>
+</div>
 
    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
    <script src="add.js"></script>

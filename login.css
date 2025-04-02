@@ -1,138 +1,159 @@
-.changebg{
-  background:url(https://i.pinimg.com/236x/a9/14/05/a91405df5998c36ce59534faa7f09980.jpg);
-  background-size: cover;
-  background-position: center;
+/* Basic styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  display: flex;
   justify-content: center;
-  min-height: 100vh;
-
+  align-items: center;
+  height: 100vh;
+  flex-direction: column; /* Keeping this to stack header above the form */
+  margin: 0; /* Remove default margin */
 }
 
-/* ส่วน Header */
+/* Header Styles */
 .header {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(90px);
-  padding: 10px 0; /* ปรับ padding เพื่อให้ระยะห่างไม่มากเกินไป */
+  background-color: #007BFF;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .header h1 {
-  padding-bottom: 5px;  /* ลด padding บน h1 */
-  font-size: 50px;
-  margin-bottom: 5px;  /* ลด margin บน h1 */
-  color: rgb(8, 112, 13);  /* เปลี่ยนสีให้ดูสดใส */
+  font-size: 36px;
+  margin-bottom: 5px;
 }
 
 .header h2 {
   font-size: 20px;
-  margin-top: 0;  /* ลด margin บน h2 */
-  color: rgb(59, 90, 60);  /* สีเทาเข้มสำหรับ h2 */
 }
 
-/* ส่วน Container */
-.container {
-  border: 2px solid rgb(87, 86, 87);
-  width: 100%;
-  margin-top: 5px;
-  margin-left: auto;
-  max-width: 350px;
-  margin-right: auto;
-  padding: 20px;
-  box-sizing: border-box;
-  margin-top: 40px;
-  background: rgba(255, 255, 255, 0.8);  /* เปลี่ยนพื้นหลังให้มีโปร่งแสง */
-  box-shadow: 0 0 40px rgba(177, 177, 177, 0.4);  /* เงาที่นุ่มนวล */
-  border-radius: 20px;
-  backdrop-filter: blur(10px);  /* เอฟเฟกต์เบลอ */
-}
-
-/* ส่วน Navigation */
+/* Top Navigation */
 .topnav {
-  overflow: hidden;
-  background-color: rgb(28, 94, 66);
+  background-color: #f0f4f8;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
 }
 
-.topnav a {
-  font-size: 20px;
-  display: block;
-  color:rgb(255, 255, 255);
-  text-align: center;
-  padding: 16px 16px;
+.topnav .position1 a {
+  font-size: 18px;
+  color: #007BFF;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* ตำแหน่งต่าง ๆ */
-.position1 {
-  text-align: center;
-  margin-top: 15px;
+.topnav .position1 a:hover {
+  color: #0056b3;
 }
 
-.position2 {
-  text-align: center;
-  margin-top: 45px;
-}
-
-.position3 {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.position3 a {
-  text-decoration: none;
-  color: rgb(10, 110, 52);
-  font-weight: bold;
-}
-
-.position3 a:visited,
-.position3 a:hover,
-.position3 a:active {
-  color: rgb(82, 146, 109);
-  text-decoration: underline;
-}
-
-/* Flex */
-.flex {
-  display: flex;
-}
-
-/* สไตล์ช่องกรอกข้อมูล */
-.form-input {
-  margin-bottom: 5px;
-  margin-left: 30px;
-  color: #333;
-}
-
-#username, #password {
-  
-  width: 80%;
-  height: 40px;  /* เพิ่มความสูงให้ช่องกรอกข้อมูล */
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-
-/* ปุ่ม Login */
-.button {
-  transition-duration: 0.5s;
+/* Login Container */
+.login-container {
   background-color: white;
-  margin-top: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px; /* Limit width to keep the form compact */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 120px; /* Added margin-top to create space from header */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button1 {
-  background-color: rgb(116, 184, 139);
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  border: 2px solid rgb(82, 131, 98);
-  border-radius: 9px;
-  padding: 12px 30%;  /* เพิ่มขนาดให้ปุ่มใหญ่ขึ้น */
+/* Add hover effect to the container */
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.button1:hover {
-  background-color: rgb(82, 146, 109);
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Input Fields */
+input {
+  width: 100%; /* Ensure inputs span full container width */
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+input:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%; /* Ensure the button spans full container width */
+  padding: 12px;
+  background-color: #007BFF;
   color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
   cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
+.login-btn:hover {
+  background-color: #0056b3;
+}
 
+/* Register Link */
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-link p {
+  font-size: 14px;
+  color: #555;
+}
+
+.register-link a {
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #0056b3;
+}
+
+/* Additional styling for login header */
+.position1 h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+}

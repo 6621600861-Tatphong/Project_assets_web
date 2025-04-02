@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="changebg" lang="th">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มขอยืมทรัพย์สิน</title>
+    <link rel="stylesheet" href="employee.css">
 </head>
+
+<header class="navigation">
+    <h2 class="logo">Asset & Inventory Management System Website</h2>
+    <nav class="navigation">
+        <a href="home.html">Home</a>
+        <a href="employee.html">Assets</a>
+        <a href="when.html">Approval</a>
+    </nav>
+    <a href="login.html"><button class="button2">Exit</button></a>
+</header>
+
 <body>
-   
+
+    <div class="container2">
+        <div>
+            <h2>ฟอร์มขอยืมทรัพย์สิน</h2>
+
+            <form id="borrow-form">
+                
+                
+
+                <div>
+                    <label for="asset_name">ชื่อทรัพย์สิน</label>
+                    <input type="text" id="asset_name" name="asset_name" required placeholder="กรุณากรอกชื่อทรัพย์สิน">
+                </div>
+
+                <div>
+                    <label for="borrow_date">วันที่ขอยืม</label>
+                    <input type="date" id="borrow_date" name="borrow_date" required>
+                </div>
+
+                <div>
+                    <label for="return_date">วันที่คืน (ถ้ามี)</label>
+                    <input type="date" id="return_date" name="return_date">
+                </div>
+
+                <div>
+                    <label for="borrower_name">ชื่อผู้ขอยืม</label>
+                    <input type="text" id="borrower_name" name="borrower_name" required
+                        placeholder="กรุณากรอกชื่อผู้ขอยืม">
+                </div>
+
+                <div id="message"></div>
+
+                <div>
+                    <button class="button button1" type="submit">ยืม</button> <!-- ✅ แก้ไข -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Assets Table</h2>
+        
+        <div>
+            <label for="searchInput">ค้นหาทรัพย์สิน</label>
+            <input type="text" id="searchInput" oninput="searchrequest()" placeholder="กรอกชื่อทรัพย์สิน">
+         </div>
+
+        <table>
+            <tr>
+                <th>asset_id</th>
+                <th>asset_name</th>
+                <th>category</th>
+                <th>brand</th>
+                <th>model</th>
+                <th>serial_number </th>
+                <th>purchase_date</th>
+                <th>purchase_price</th>
+                <th>status</th>
+                <th>Adjust</th>
+            </tr>
+            <tbody id="asset"></tbody>
+        </table>
+        <div class="status-container">
+            <p class="status-text">ยืมได้: <span class="status-number available">0</span></p>
+            <p class="status-text">ยืมไม่ได้: <span class="status-number unavailable">0</span></p>
+            <p class="status-text">รวมทั้งหมด: <span class="status-number total">0</span></p>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="employee.js"></script>
 </body>
+
 </html>

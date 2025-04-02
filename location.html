@@ -1,29 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Location Management</title>
    <link rel="stylesheet" href="location.css">
 </head>
+
 <body>
-   
    <div class="header">
-      <h1>My Website</h1>
-      <p>Resize the browser window to see the effect.</p>
-    </div>
-    
-    <div class="topnav">
-      <a href="add.html">Assets Adjust</a>
-      <a href="location.html">Link</a>
-      <a href="repair.html">Repair History</a>
-      <a href="login.html" style="float:right">Exit</a>
-    </div>
+      <h1>Asset & Inventory</h1>
+      <h2>Management System Website</h2>
+   </div>
 
-    
+   <ul>
+      <div class="bottom">
+         <h1>Asset & Inventory</h1>
+         <h2>Management System Website</h2>
+      </div>
+      <li><a href="add.html">Assets Adjust</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="borrow.html">Asset Borrow</a></li>
+      <li><a href="login.html" style="float:bottom">Exit</a></li>
+   </ul>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="location.js"></script>
+   <div class="container">
+      <h3>Location Form</h3>
+      <p>กรุณากรอกข้อมูลที่อยู่ของสินทรัพย์</p>
 
+      <div class="form-container">
+         <div class="form-group">
+            <label class="form-label">Asset Code:</label>
+            <input type="text" name="asset_code" id="asset_code" class="form-input" placeholder="Enter Asset Code">
+         </div>
+         <div class="form-group">
+            <label class="form-label">Location Name:</label>
+            <input type="text" name="location_name" id="location_name" class="form-input" placeholder="Enter Location">
+         </div>
+         <div class="form-group">
+            <label class="form-label">Department:</label>
+            <input type="text" name="department" id="department" class="form-input" placeholder="Enter Department">
+         </div>
+         <div class="form-group">
+            <label class="form-label">Building:</label>
+            <input type="text" name="building" id="building" class="form-input" placeholder="Enter Building">
+         </div>
+      </div>
+
+      <div id="message"></div>
+      <button class="button button2" onclick="submitLocation()">Submit</button>
+   </div>
+
+   <div class="container">
+   <h3>Location Table</h3>
+   <table>
+      <tr>
+         <th>Asset ID</th>
+         <th>Location Name</th>
+         <th>Department</th>
+         <th>Building</th>
+         <th>Actions</th>
+      </tr>
+      <tbody id="location_data"></tbody>
+   </table>
+</div>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+   <script src="location.js"></script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Asset Borrow</title>
+   <link rel="stylesheet" href="borrow.css">
+</head>
+<body>
+   <div class="header">
+      <h1>Asset & Inventory</h1>
+      <h2>Management System Website</h2>
+   </div>
+
+   <ul>
+      <div class="bottom">
+         <h1>Asset & Inventory</h1>
+         <h2>Management System Website</h2>
+      </div>
+      <li><a href="add.html">Assets Adjust</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="borrow.html">Asset Borrow</a></li>
+      <li><a href="login.html" style="float:bottom">Exit</a></li>
+   </ul>
+
+   <main class="container">
+      <h3>Borrow Assets</h3>
+      <div>
+         <label for="searchInput">ค้นหาผู้ยืม</label>
+         <input type="text" id="searchInput" oninput="searchrequest()" placeholder="กรอกชื่อผู้ยืม">
+      </div>
+      <table>
+         <thead>
+            <tr>
+               <th>Asset Name</th>
+               <th>Borrower Name</th>
+               <th>Borrow Date</th>
+               <th>Return Date</th>
+               <th>Status</th>
+               <th>Adjust</th>
+            </tr>
+         </thead>
+         <tbody id="borrow"></tbody>
+      </table>
+
+      <div class="approval-section">
+         <h3>Approval </h3>
+         <h4>Status Edit : </h4>
+         <label><input name="status" type="radio" value="Approved"> Approved</label>
+         <label><input name="status" type="radio" value="Denied"> Denied</label>
+         <label><input name="status" type="radio" value="Requested"> Requested</label>
+      </div>
+
+      <div id="message"></div>
+      <button class="button" type="submit" onclick="submitData()">Submit</button>
+   </main>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+   <script src="borrow.js"></script>
+</body>
+</html>

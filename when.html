@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="when.css">
+</head>
+
+<body>
+
+   <header class="navigation">
+      <h2 class="logo">Asset & Inventory Management System Website</h2>
+      <nav class="navigation">
+         <a href="home.html">Home</a>
+         <a href="employee.html">Assets</a>
+         <a href="when.html">Approval</a>
+      </nav>
+      <a href="login.html"><button class="button2">Exit</button></a>
+   </header>
+   <div class="container">
+      <h2>Borrow Assets</h2>
+      <!-- เพิ่มช่องค้นหาชื่อผู้ยืม -->
+      <div>
+         <label for="searchInput">ค้นหาผู้ยืม</label>
+         <input type="text" id="searchInput" oninput="searchrequest()" placeholder="กรอกชื่อผู้ยืม">
+      </div>
+      <table>
+         <tr>
+            <th>Asset Name</th>
+            <th>Borrower Name</th>
+            <th>Borrow Date</th>
+            <th>Return Date</th>
+            <th>Status</th>
+         </tr>
+         <tbody id="borrow"></tbody>
+      </table>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+   <script src="when.js"></script>
+
+</body>
+
+</html>

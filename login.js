@@ -17,7 +17,7 @@ const cheack_info = async () => {
          if (response.data.role === 'Admin') {
             window.location.href = 'add.html'; // ไปหน้า admin
          } else if (response.data.role === 'Employee') {
-            window.location.href = 'employee.html'; // ไปหน้า employee
+            window.location.href = 'home.html'; // ไปหน้า employee
          }
       } else {
          console.log('Invalid credentials:', response.data.message);
