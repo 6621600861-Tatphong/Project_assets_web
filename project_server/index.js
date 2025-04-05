@@ -366,7 +366,7 @@ app.post('/login', async (req, res) => {
         const [user] = await conn.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password]);
         //เช็คว่าเจอไหม
         if (user.length === 0) {
-            return res.status(401).json({ message: 'Invalid credentials' });
+            return res.status(401).json({ message: 'User not Found please try again' });
         }
         //รับข้อมูลของผู้ใช้
         const users = user[0];

@@ -9,23 +9,27 @@ window.onload = async () => {
 };
 
 const submitData = async () => {
+   
     let messageDOM = document.getElementById('message');
 
     const validateAddData = (data) => {
         let errors = [];
     
-        if (!data.asset_name) errors.push('กรุณากรอกชื่อทรัพย์สิน');
-        if (!data.borrow_date) errors.push('กรุณากรอกวันที่ขอยืม');
-        if (!data.borrower_name) errors.push('กรุณากรอกชื่อผู้ขอยืม');
+        if (!data.asset_name) 
+         errors.push('กรุณากรอกชื่อทรัพย์สิน');
+        if (!data.borrow_date) 
+         errors.push('กรุณากรอกวันที่ขอยืม');
+        if (!data.borrower_name) 
+         errors.push('กรุณากรอกชื่อผู้ขอยืม');
     
         return errors; // ต้อง return array เสมอ
     };
 
     let assetData = {
-        asset_name: document.querySelector('input[name=asset_name]')?.value || '',
-        borrow_date: document.querySelector('input[name=borrow_date]')?.value || '',
-        return_date: document.querySelector('input[name=return_date]')?.value || '',
-        borrower_name: document.querySelector('input[name=borrower_name]')?.value || '',
+        asset_name: document.querySelector('input[name=asset_name]')?.value ,
+        borrow_date: document.querySelector('input[name=borrow_date]')?.value ,
+        return_date: document.querySelector('input[name=return_date]')?.value ,
+        borrower_name: document.querySelector('input[name=borrower_name]')?.value ,
     
        status: 'Requested' // กำหนดค่า status เป็น Requested
     };

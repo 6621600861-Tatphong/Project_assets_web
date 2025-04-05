@@ -69,11 +69,11 @@ const submitData = async () => {
    } catch (error) {
       console.error('Error submitting data:', error);
 
-      let htmlData = `<div><div>${error.message}</div><ul>`;
+      let htmlData = `<div><div>${error.message}</div><div>`;
       for (let i = 0; i < error.errors.length; i++) {
-         htmlData += `<li>${error.errors[i]}</li>`;
+         htmlData += `<div>${error.errors[i]}</div>`;
       }
-      htmlData += '</ul></div>';
+      htmlData += '</div></div>';
 
       messageDOM.innerHTML = htmlData;
       messageDOM.className = 'message danger';
